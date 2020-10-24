@@ -1,0 +1,24 @@
+#include <stdio.h>
+int main() {
+	//code
+	int test,k=0;
+	scanf("%d",&test);
+	while(k<test){
+	long int i,n,m,j,mul;
+	scanf("%ld%ld",&n,&m);
+	for(i=1;i<m/2;i++){
+	    mul = 1;
+	    for(j=1;j<=n;j++){
+	        mul *= i;
+	    }
+	    if(mul == m){
+	        printf("%d\n",i);
+	        goto label;
+	    }
+	}
+	printf("-1\n");
+	label:
+	k++;
+	}
+	return 0;
+}
